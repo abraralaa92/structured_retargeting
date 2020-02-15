@@ -1,0 +1,12 @@
+NO of Children pr SIB = 6,	 Hierarchy = 4
+NO of TDRs = 1296
+For NW_vertices: Capacity= 9068,	 Size= 9068
+For NW_clauses: Capacity= 3022,	 Size= 2850
+For NW_SDG: Capacity= 9068,	 Size= 7514
+For NW_smv: Capacity= 4534, 	 Size= 4404
+For _SCT: Capacity= 5, 	 Size= 0
+For NW_SCT_to_SAT_predicates: Capacity= 14254, 	 Size= 0
+For NW_SCT_to_SAT_clauses: Capacity= 28504, 	Size= 0
+For NW_SAT_vertices: Capacity= 14254, 	 Size= 0
+For Non_important_internal_variables: Capacity= 2850, 	 Size= 0
+////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,55 @@
+Retargetting_v14_upper_bound_computations: was building NW_SCT Max Width by SCBs Access Merging
+Retargetting_v15_upper_bound_computations_2: was building NW_SCT Max Depth by TDR Active Checking
+
+1- rename (split_string_into_vector) into (split_selection_clause_into_vectorOfClauses) and change little bit into its implementation.
+2- add some code modifications through the whole code in different sections to avoid calling struct's copy constructor.
+3- change return type of (get_selection_clause) to be (size_t) to avoid any copy constructor callings.
+4- rename (get_selection_clause) to (get_selection_clause_index). To be consistent with the return type.
+5- add method SCBs_Access_Merging();
+6- add method TDRs_Active_Checking();
+7- add these methods which are all associated with TDRs_Active_checking()
+	void add_SCT_additional_constraints();
+	void SCBs_Access_Merging();
+	void TDRs_deActivation_Checking();
+	void set_initial_configuration();
+	void set_target_configuration();
+	reg get_complete_conflict_SCB(vector<reg>& TDR_selClause);
+	bool isThere_SCB_inSame_ASP(vector<reg>& TDR_selClause);
+	bool check_conflicted_SCB_existence(reg& conflicted_SCB);
+	bool is_simultaneouslyActive(vector<reg>& TDR_selClause, vector<reg>& SCB_selClause);
+	bool has_SCB_inCommon(vector<reg>& TDR_selClause, vector<reg>& SCB_selClause);
+8- Rename SCT to 2D_SCT
+9- add 	static vector<_selection_vector> NW_selectivity_vectors;
+10- add struct clause
+11- add struct selection_vector
+12- change all static variables to global variables
+13- rename print_SCT to print_2D_SCT
+14- use (find) in (is_SCB_SIB) instead of (strstr)
+15- add method (set_initial_configuration)
+16- remove method (update_nodes_active_state)
+17- add method (void add_SCT_additional_constraints())
+18- change all (static variables) to (global variables)
+19- add method (vector<reg> twiceSatisfying_SCBs;)
+20- Remove (measurement get_CSU_upperBound_lightWay(const string& NW_clauses_file);) method
+21-
+
+
+
+
+///////////////////////////////////////////////////////////
+try to start from initial config (not equal zero) to some specific target configuration 
+
+
+check function included in execution_time like (copy_subTree , adjust_vector_capacity, validation_model, SDG ordering, sorting)
+
+
+test reserve memory for (0,0) children per sib option
+
+
+test "SCB sorting" in case of (C1) network, mix of N's networks
+
+check code execution_time of type (duration<float>) equal to (double) value
+execution_time/max_no_CSUs.reading
+
+reserve in case of upper bound like (VN, ..)not used
+

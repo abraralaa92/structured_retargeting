@@ -1,0 +1,7 @@
+{{ "SCB0", "TRUE", 1, 0 },
+{ "SCB1", "TRUE", 1, 0 },
+{ "SCB2", "SCB0^!SCB1", 1, 0 },
+{ "SCB3", "!SCB0^!SCB1", 1, 0 },
+{ "SCB4", "!SCB0^SCB1", 1, 0 },
+{ "SCB5", "SCB0^SCB1^!SCB3^SCB4", 1, 0 },
+{ "I", "SCB0^SCB1^SCB2^SCB3^!SCB4^SCB5", 20, 0 }};
